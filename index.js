@@ -22,6 +22,7 @@ allBoxes.forEach(box => box.addEventListener('click', startGame = () => {
         box.style.backgroundImage = "url('red.png')";
         box.innerHTML = 'X'
         player = 'O'
+        checkPlayerX()
     }
 }))
 const checkPlayerO = () => {
@@ -43,3 +44,24 @@ const checkPlayerO = () => {
         sstatus.innerHTML = 'Player O Win'
     }
 }
+
+const checkPlayerX = () => {
+    if (box1.innerHTML == "X" && box2.innerHTML == 'X' && box3.innerHTML == 'X') {
+        sstatus.innerHTML = 'Player X Win'
+    }else if (box4.innerHTML == "X" && box5.innerHTML == 'X' && box6.innerHTML == 'X') {
+        sstatus.innerHTML = 'Player X Win'
+    }else if (box7.innerHTML == "X" && box8.innerHTML == 'X' && box9.innerHTML == 'X') {
+        sstatus.innerHTML = 'Player X Win'
+    }else if (box1.innerHTML == "X" && box5.innerHTML == 'X' && box9.innerHTML == 'X') {
+        sstatus.innerHTML = 'Player X Win'
+    }else if (box3.innerHTML == "X" && box5.innerHTML == 'X' && box7.innerHTML == 'X') {
+        sstatus.innerHTML = 'Player X Win'
+    }else if (box1.innerHTML == "X" && box4.innerHTML == 'X' && box7.innerHTML == 'X') {
+        sstatus.innerHTML = 'Player X Win'
+    }else if (box2.innerHTML == "X" && box5.innerHTML == 'X' && box8.innerHTML == 'X') {
+        sstatus.innerHTML = 'Player X Win'
+    }else if (box3.innerHTML == "X" && box6.innerHTML == 'X' && box9.innerHTML == 'X') {
+        sstatus.innerHTML = 'Player X Win'
+    }
+}
+
