@@ -17,9 +17,29 @@ allBoxes.forEach(box => box.addEventListener('click', startGame = () => {
         box.innerHTML = 'O'
         box.style.backgroundImage = "url('yellow.png')";
         player = 'X'
+        checkPlayerO()
     } else {
         box.style.backgroundImage = "url('red.png')";
         box.innerHTML = 'X'
         player = 'O'
     }
 }))
+const checkPlayerO = () => {
+    if (box1.innerHTML == "O" && box2.innerHTML == 'O' && box3.innerHTML == 'O') {
+        sstatus.innerHTML = 'Player O Win'
+    }else if (box4.innerHTML == "O" && box5.innerHTML == 'O' && box6.innerHTML == 'O') {
+        sstatus.innerHTML = 'Player O Win'
+    }else if (box7.innerHTML == "O" && box8.innerHTML == 'O' && box9.innerHTML == 'O') {
+        sstatus.innerHTML = 'Player O Win'
+    }else if (box1.innerHTML == "O" && box5.innerHTML == 'O' && box9.innerHTML == 'O') {
+        sstatus.innerHTML = 'Player O Win'
+    }else if (box3.innerHTML == "O" && box5.innerHTML == 'O' && box7.innerHTML == 'O') {
+        sstatus.innerHTML = 'Player O Win'
+    }else if (box1.innerHTML == "O" && box4.innerHTML == 'O' && box7.innerHTML == 'O') {
+        sstatus.innerHTML = 'Player O Win'
+    }else if (box2.innerHTML == "O" && box5.innerHTML == 'O' && box8.innerHTML == 'O') {
+        sstatus.innerHTML = 'Player O Win'
+    }else if (box3.innerHTML == "O" && box6.innerHTML == 'O' && box9.innerHTML == 'O') {
+        sstatus.innerHTML = 'Player O Win'
+    }
+}
