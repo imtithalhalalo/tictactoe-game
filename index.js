@@ -18,7 +18,7 @@ allBoxes.forEach(box => box.addEventListener('click', startGame = () => {
         box.style.backgroundImage = "url('yellow.png')";
         player = 'X'
         checkPlayerO()
-    } else {
+    } else if(box.innerHTML == '' && player == 'X'){
         box.style.backgroundImage = "url('red.png')";
         box.innerHTML = 'X'
         player = 'O'
