@@ -11,4 +11,15 @@ const box9 = document.getElementById('box9')
 let allBoxes = [box1, box2, box3, box4, box5, box6, box7, box8, box9]
 const sstatus = document.getElementById('status')
 sstatus.innerHTML = "Hello"
-let player = 'X'
+let player = 'O'
+allBoxes.forEach(box => box.addEventListener('click', startGame = () => {
+    if (box.innerHTML == '' && player == 'O') {
+        box.innerHTML = 'O'
+        box.style.backgroundImage = "url('yellow.png')";
+        player = 'X'
+    } else {
+        box.style.backgroundImage = "url('red.png')";
+        box.innerHTML = 'X'
+        player = 'O'
+    }
+}))
